@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://blkwiat5b6iy2"]
+
+[ext_resource type="PackedScene" uid="uid://6hxfj2vuwdx5" path="res://Prefabs/UnitsScene/unit.tscn" id="1_5cfo3"]
+[ext_resource type="Texture2D" uid="uid://darq2j0osl4ub" path="res://Assets/IsometricTRPGAssetPack_Entities.png" id="2_cud8l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqf6c"]
+atlas = ExtResource("2_cud8l")
+region = Rect2(4.04416, 275.878, 8.27351, 9.17282)
+
+[node name="Unit" instance=ExtResource("1_5cfo3")]
+id = 102
+
+[node name="Sprite2D" parent="." index="0"]
+texture = SubResource("AtlasTexture_yqf6c")

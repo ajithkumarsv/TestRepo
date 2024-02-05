@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dc8caxayeuf3"]
+
+[ext_resource type="Texture2D" uid="uid://mhrc7l671dmt" path="res://new_atlas_texture.tres" id="1_5gf8b"]
+
+[node name="Button" type="TextureButton"]
+custom_minimum_size = Vector2(80, 60)
+texture_normal = ExtResource("1_5gf8b")

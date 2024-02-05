@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="stat" load_steps=2 format=3 uid="uid://ym4pqb88nii5"]
+
+[ext_resource type="Script" path="res://stat.gd" id="1_wl1x2"]
+
+[resource]
+script = ExtResource("1_wl1x2")
+health = 100
+movement = 5
+movable = false
+attackRange = 2
+troop_type = 0
+troop_team = 0
