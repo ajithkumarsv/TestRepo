@@ -15,7 +15,7 @@ func _remove_sprite_ui(index:int):
 	scrol_container._remove_item(index)
 	
 func _update_sprite_ui(index:int,texture:Texture2D):
-	printerr("called Change image",texture)
+	#printerr("called Change image",texture)
 	scrol_container._add_item(index,texture)
 	pass
 	

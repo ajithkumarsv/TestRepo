@@ -17,6 +17,7 @@ func _remove_item(index:int):
 		dict[index]["count"]=x
 		dict[index]["unit_cell"]._add_number(x)
 		if x==0:
+			dict[index]["unit_cell"].queue_free()
 			dict.erase(index)
 	#for i in unit_cells:
 		#if i.id ==index:

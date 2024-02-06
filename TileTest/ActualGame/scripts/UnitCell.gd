@@ -22,10 +22,12 @@ func _on_button_down():
 
 
 func _on_selected_focus_entered():
+	printerr("enter")
 	on_selected_unit.emit(id)
 	selected.visible=true
 
 
 func _on_selected_focus_exited():
+	printerr("exit")
 	on_selected_unit.emit(-1)
 	selected.visible=false

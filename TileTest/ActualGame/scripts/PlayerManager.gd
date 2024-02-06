@@ -21,16 +21,18 @@ func _ready():
 		GameUI.instance._update_sprite_ui(created_unit.id,created_unit.get_child(0).texture)
 	
 
-func current_selected_unit(id :int):
-	if(id<0) :
-		selected_unit=null
-		return
+func current_selected_unit(id :int)->bool:
+	#if(id<0) :
+		#selected_unit=null
+		#return
+	
 	for i in available_units:
 		if i.id== id:
+			printerr("searching for units",id)
 			selected_unit =i
 			#available_units.erase(i)
-			break
-			
+			return true
+	return false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
@@ -40,13 +42,14 @@ func _unhandled_input(event):
 		var data=InputManager.instance.tile_info
 		#print("point 1",data,data.can_move)
 		if data && data.can_move :
-			printerr("point 2")
 			data.can_move= false
 			available_units.erase(selected_unit)
 			get_tree().root.add_child(selected_unit);
 			selected_unit.global_position =InputManager.instance._get_mouse_world_pos()
 			GameUI.instance._remove_sprite_ui(selected_unit.id)
 			placed_units.append(selected_unit);
-			selected_unit =null
+			if(!current_selected_unit(selected_unit.id)):
+				selected_unit =null
+			
 		
 			
