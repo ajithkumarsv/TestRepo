@@ -15,6 +15,8 @@ var tile_vector:Vector2i =Vector2.ZERO
 var tile_info :TileInfo=null
 @export var selection_sprite:Node2D
 static  var current_data:TileData=null
+@export var font:Font
+var arr:Array[Vector2]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -34,5 +36,19 @@ func _unhandled_input(event):
 	
 	tile_vector=tile_map.local_to_map( get_global_mouse_position())
 	tile_info =TileManager.instance.get_tile_info(tile_vector)
+
+func redraw():
+	queue_redraw()
 	
+func draw_Path(ar:Array[Vector2i]):
+	arr.clear()
+	
+	for i in ar:
+		
+		arr.append(tile_map.map_to_local(i))
+	
+func _draw():
+	for i in arr:
+		draw_circle(i,2,Color.GREEN)
+		#draw_string(font,tile_map.map_to_local(i),str(i.x)+":"+str(i.y),HORIZONTAL_ALIGNMENT_CENTER,200,10,)
 	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ckcbfrkctfc3k"]
+[gd_scene load_steps=18 format=3 uid="uid://ckcbfrkctfc3k"]
 
 [ext_resource type="Script" path="res://ActualGame/scripts/TileManager.gd" id="1_gvh26"]
 [ext_resource type="TileSet" uid="uid://bmy3yahodoe4w" path="res://tile_map.tres" id="1_hsq1c"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://gfwhkpe1oco8" path="res://Prefabs/UnitsScene/unit4.tscn" id="6_vw2fp"]
 [ext_resource type="PackedScene" uid="uid://ccja7iyjv83lg" path="res://Prefabs/UnitsScene/unit5.tscn" id="7_42g6m"]
 [ext_resource type="PackedScene" uid="uid://dxfi3e8u6kkqx" path="res://Prefabs/UnitsScene/unit6.tscn" id="8_gxfdo"]
+[ext_resource type="FontFile" uid="uid://b8genkmmmhi2j" path="res://ActualGame/theme/font/static/Orbitron-Black.ttf" id="13_ce5sf"]
 [ext_resource type="Script" path="res://ActualGame/scripts/GameUI.gd" id="14_e38gm"]
 [ext_resource type="Script" path="res://ActualGame/scripts/UnitScrollContainer.gd" id="15_t6gt8"]
 [ext_resource type="PackedScene" uid="uid://cevjshishcc78" path="res://ActualGame/scenes/Prefabs/sprite_item.tscn" id="16_7wflg"]
@@ -36,7 +37,9 @@ script = ExtResource("3_h7xgn")
 script = ExtResource("4_u0kj8")
 
 [node name="InputManager" type="Node2D" parent="."]
+z_index = 420
 script = ExtResource("3_jjnb1")
+font = ExtResource("13_ce5sf")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true

@@ -5,8 +5,8 @@
 [resource]
 script = ExtResource("1_wl1x2")
 health = 100
-movement = 5
+movement = 2
 movable = false
-attackRange = 2
+attackRange = 5
 troop_type = 0
 troop_team = 0
