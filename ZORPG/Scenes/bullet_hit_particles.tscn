@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfggvxfdvl8ix"]
+
+[ext_resource type="Script" path="res://particles.gd" id="1_lafmi"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_yqtdf"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wxbfg"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(0.205, 0, 0)
+emission_shape = 1
+emission_sphere_radius = 1.0
+velocity_pivot = Vector3(0, 2.505, 0)
+direction = Vector3(1, 1.015, 0)
+spread = 134.117
+gravity = Vector3(0, 0, 0)
+radial_accel_min = 33.33
+radial_accel_max = 100.0
+damping_max = 1.03
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+material = SubResource("CanvasItemMaterial_yqtdf")
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_wxbfg")
+lifetime = 0.2
+one_shot = true
+script = ExtResource("1_lafmi")
+
+[connection signal="finished" from="." to="." method="_destroy"]

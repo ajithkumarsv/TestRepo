@@ -6,15 +6,23 @@ func  _enter_tree():
 		queue_free()
 		return
 	instance =self
-	
+
 
 @export var friendly_units :Array[PackedScene]
 @export var enemy_units :Array[PackedScene]
-# Called when the node enters the scene tree for the first time.
+
+var playing_team :global_use.playing_team = global_use.playing_team.NONE
+
 func _ready():
-	pass # Replace with function body.
+	pass 
 
+func _on_unit_move():
+	pass
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _on_player_turn_end():
+	
+	pass
+
+func _on_ai_turn_end():
+	
 	pass

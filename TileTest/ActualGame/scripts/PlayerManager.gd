@@ -6,7 +6,7 @@ func  _enter_tree():
 		queue_free()
 		return
 	instance =self
-
+	
 var unit_manager :UnitManager
 var available_units :Array[unit]
 var placed_units :Array[unit]
@@ -15,8 +15,7 @@ var active_unit:unit=null
 
 func _ready():
 	unit_manager =UnitManager.instance
-	
-	for i in range(50):
+	for i in range(10):
 		var created_unit   = unit_manager.friendly_units[randi_range(0,unit_manager.friendly_units.size()-1)].instantiate() as unit 
 		available_units.append(created_unit)
 		GameUI.instance._update_sprite_ui(created_unit.id,created_unit.get_child(0).texture)
@@ -49,7 +48,6 @@ func _unhandled_input(event):
 			InputManager.instance.redraw()
 			printerr("selected unit")
 		if selected_unit:
-			#print("point 1",data,data.can_move)
 			if data && data.can_move :
 				data.can_move= false
 				available_units.erase(selected_unit)

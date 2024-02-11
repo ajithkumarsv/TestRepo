@@ -1,12 +1,13 @@
 [gd_resource type="Resource" script_class="stat" load_steps=2 format=3 uid="uid://ym4pqb88nii5"]
 
-[ext_resource type="Script" path="res://stat.gd" id="1_wl1x2"]
+[ext_resource type="Script" path="res://ActualGame/scripts/stat.gd" id="1_e2jg5"]
 
 [resource]
-script = ExtResource("1_wl1x2")
+script = ExtResource("1_e2jg5")
 health = 100
 movement = 2
 movable = false
 attackRange = 5
 troop_type = 0
-troop_team = 0
+troop_team = 1
+actions = 2

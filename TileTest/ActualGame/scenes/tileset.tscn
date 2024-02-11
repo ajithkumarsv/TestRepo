@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ckcbfrkctfc3k"]
+[gd_scene load_steps=19 format=3 uid="uid://ckcbfrkctfc3k"]
 
 [ext_resource type="Script" path="res://ActualGame/scripts/TileManager.gd" id="1_gvh26"]
 [ext_resource type="TileSet" uid="uid://bmy3yahodoe4w" path="res://tile_map.tres" id="1_hsq1c"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dxfi3e8u6kkqx" path="res://Prefabs/UnitsScene/unit6.tscn" id="8_gxfdo"]
 [ext_resource type="FontFile" uid="uid://b8genkmmmhi2j" path="res://ActualGame/theme/font/static/Orbitron-Black.ttf" id="13_ce5sf"]
 [ext_resource type="Script" path="res://ActualGame/scripts/GameUI.gd" id="14_e38gm"]
+[ext_resource type="Script" path="res://ActualGame/scripts/CameraManager.gd" id="15_lrk17"]
 [ext_resource type="Script" path="res://ActualGame/scripts/UnitScrollContainer.gd" id="15_t6gt8"]
 [ext_resource type="PackedScene" uid="uid://cevjshishcc78" path="res://ActualGame/scenes/Prefabs/sprite_item.tscn" id="16_7wflg"]
 
@@ -51,6 +52,7 @@ layer_0/tile_data = PackedInt32Array(65514, 65536, 0, 131050, 0, 0, 196586, 0, 0
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(57, 108)
 zoom = Vector2(3, 3)
+script = ExtResource("15_lrk17")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

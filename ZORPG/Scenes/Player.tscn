@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://cyfcxapod3nq2"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_q45k6"]
+[ext_resource type="Texture2D" uid="uid://darq2j0osl4ub" path="res://Assets/IsometricTRPGAssetPack_Entities.png" id="2_bg5hs"]
+[ext_resource type="PackedScene" uid="uid://dmuuqwv3r1ae1" path="res://Scenes/gun.tscn" id="3_unlg0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sej4v"]
+radius = 3.0
+height = 10.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2a1w"]
+atlas = ExtResource("2_bg5hs")
+region = Rect2(4, 310, 9, 9)
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("gun")]
+collision_mask = 3
+script = ExtResource("1_q45k6")
+gun = NodePath("Gun")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_sej4v")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_d2a1w")
+
+[node name="Gun" parent="." instance=ExtResource("3_unlg0")]

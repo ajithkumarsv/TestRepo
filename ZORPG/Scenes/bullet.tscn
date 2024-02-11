@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://b774fhp6px5ki"]
+
+[ext_resource type="Script" path="res://Scripts/bullet.gd" id="1_gie73"]
+[ext_resource type="PackedScene" uid="uid://dfggvxfdvl8ix" path="res://Scenes/bullet_hit_particles.tscn" id="2_i3c13"]
+[ext_resource type="Texture2D" uid="uid://b1tycmk7y0lo4" path="res://Assets/bullet.jpg" id="2_ydvli"]
+
+[node name="bullet" type="Node2D"]
+script = ExtResource("1_gie73")
+speed = 100
+particles = ExtResource("2_i3c13")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 2.98023e-08)
+scale = Vector2(0.25, 1)
+texture = ExtResource("2_ydvli")

@@ -1,6 +1,11 @@
-extends Camera2D
+class_name CameraManager extends Camera2D
 
-
+static var instance :CameraManager
+func  _enter_tree():
+	if instance!=null:
+		queue_free()
+		return
+	instance =self
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.

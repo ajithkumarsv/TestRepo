@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmuuqwv3r1ae1"]
+
+[ext_resource type="Script" path="res://Scripts/Weapon.gd" id="1_ay3cd"]
+[ext_resource type="PackedScene" uid="uid://b774fhp6px5ki" path="res://Scenes/bullet.tscn" id="2_yqp7m"]
+[ext_resource type="Texture2D" uid="uid://b3fo338axirht" path="res://icon.svg" id="3_rabno"]
+
+[node name="Gun" type="Marker2D" node_paths=PackedStringArray("spawnPosition")]
+rotation = 6.28319
+script = ExtResource("1_ay3cd")
+spawnPosition = NodePath("spawnPos")
+bull = ExtResource("2_yqp7m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7, -1.43051e-06)
+rotation = 1.5708
+scale = Vector2(0.0265625, 0.1)
+texture = ExtResource("3_rabno")
+
+[node name="spawnPos" type="Marker2D" parent="."]
+position = Vector2(13, -5.80629e-05)
+
+[node name="Sprite2D" type="Sprite2D" parent="spawnPos"]
+scale = Vector2(0.0144213, 0.0211819)
+texture = ExtResource("3_rabno")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+rotation = -1.5708
+target_position = Vector2(0.00057937, 131)
+collision_mask = 3
+collide_with_areas = true

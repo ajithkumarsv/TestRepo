@@ -73,7 +73,7 @@ func unit_attackable_tile(un:unit)->Array[Vector2i]:
 			x.append(Vector2i(d.x,d.y-1))
 			
 		for t in x:
-			if !test_ar.has(t) && is_target(t):
+			if !test_ar.has(t) && is_target(un,t):
 				test_ar.append(t)
 			
 		print("Temp length",test_ar.size())
@@ -88,10 +88,14 @@ func is_valid(pos:Vector2i)->bool:
 	else:
 		return false
 
-func is_target(pos:Vector2i)->bool:
+func is_target(un:unit,pos:Vector2i)->bool:
 	var v =str_from_vec(pos)
-	if dict.has(v) && dict[v].current_unit:
-		return true
+	if dict.has(v) :
+		var t=dict[v].current_unit  as unit
+		if t and t.stats.troop_team!= un.stats.troop_team:
+			return true
+		else:
+			return false
 	else:
 		return false
 

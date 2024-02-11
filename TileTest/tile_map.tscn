@@ -8,7 +8,7 @@
 [ext_resource type="Shader" uid="uid://ca8gx8uahaia" path="res://Shaders/shader.tres" id="3_dx3ww"]
 [ext_resource type="PackedScene" uid="uid://blkwiat5b6iy2" path="res://Prefabs/UnitsScene/unit2.tscn" id="3_id3ja"]
 [ext_resource type="PackedScene" uid="uid://bmoebs4syb3tc" path="res://Prefabs/UnitsScene/unit3.tscn" id="4_0kac5"]
-[ext_resource type="Script" path="res://CameraMovement.gd" id="4_p66an"]
+[ext_resource type="Script" path="res://ActualGame/scripts/CameraManager.gd" id="4_p66an"]
 [ext_resource type="PackedScene" uid="uid://gfwhkpe1oco8" path="res://Prefabs/UnitsScene/unit4.tscn" id="5_ly4c5"]
 [ext_resource type="PackedScene" uid="uid://bcmgod7jvrauj" path="res://ui.tscn" id="5_mpalb"]
 [ext_resource type="PackedScene" uid="uid://ccja7iyjv83lg" path="res://Prefabs/UnitsScene/unit5.tscn" id="6_gq8rh"]

@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmoebs4syb3tc"]
+[gd_scene load_steps=5 format=3 uid="uid://bmoebs4syb3tc"]
 
 [ext_resource type="PackedScene" uid="uid://6hxfj2vuwdx5" path="res://Prefabs/UnitsScene/unit.tscn" id="1_d844g"]
 [ext_resource type="Texture2D" uid="uid://darq2j0osl4ub" path="res://Assets/IsometricTRPGAssetPack_Entities.png" id="2_do078"]
+[ext_resource type="Resource" uid="uid://bj74fcltuxvnq" path="res://enemy_unit_stats.tres" id="2_nl7vp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4v4be"]
 atlas = ExtResource("2_do078")
 region = Rect2(4.73347, 241.902, 8.09366, 8.99295)
 
 [node name="Unit" instance=ExtResource("1_d844g")]
+stats = ExtResource("2_nl7vp")
 id = 103
 
 [node name="Sprite2D" parent="." index="0"]

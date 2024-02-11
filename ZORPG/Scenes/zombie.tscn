@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://bag8tfsxfyv5m"]
+
+[ext_resource type="Script" path="res://Scripts/Zombie.gd" id="1_c5of1"]
+[ext_resource type="Texture2D" uid="uid://darq2j0osl4ub" path="res://Assets/IsometricTRPGAssetPack_Entities.png" id="2_ix1i7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqqt6"]
+atlas = ExtResource("2_ix1i7")
+region = Rect2(5, 344, 8, 9)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_27obw"]
+radius = 4.0
+height = 10.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iwbb5"]
+radius = 120.669
+
+[node name="Zombie" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_c5of1")
+speed = 3000.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_vqqt6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_27obw")
+
+[node name="PlayerNotifier" type="Area2D" parent="."]
+collision_layer = 4
+
+[node name="notifiershape" type="CollisionShape2D" parent="PlayerNotifier"]
+shape = SubResource("CircleShape2D_iwbb5")
+
+[connection signal="body_entered" from="PlayerNotifier" to="." method="_on_player_notifier_body_entered"]
+[connection signal="body_exited" from="PlayerNotifier" to="." method="_on_player_notifier_body_exited"]
